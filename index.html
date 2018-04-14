@@ -43,6 +43,14 @@
 
   	</main>
 
+    <footer>
+      <section class="jumbotron text-center">
+        <div class="row">
+          <p>Votre meetup adoré n'est pas listé ici ? <a href="https://github.com/ndeloof/rennes.tech/issues">Faites le nous savoir !</a></p>
+        </div>
+      </section>
+    </footer>
+
 
 
 
@@ -55,16 +63,20 @@
 
     <script>
         addEvents = function(json) {
-        	console.log(json);    				
-			$.each(json.data, function() {
-				var events = $("#events")
-				console.log(events)
-	        	events.append("<div class='col-md-4'>" 
+        	$.each(json.data, function() {
+            var image = "";    
+          if (this.featured_photo) {
+            image = this.featured_photo.photo_link;
+          }
+          
+				  $("#events").append(
+                "<div class='col-md-4'>" 
 	        		+ "<div class='card mb-4 box-shadow'>"
-	        		+ "<img class='card-img-top'>"
+	        		+ "<img class='card-img-top' src='"+ image + "'>"
 	        		+ "<div class='card-body'>"
                   	+ "<h5 class='card-title'>"+this.name+"</h5>"
                   	+ "<h6 class='card-subtitle'><i class='far fa-calendar'></i> "+this.local_date+"</h6>"
+              // meetup icon from this.group.id
 	        		+ "<div class='card-text'>"
                   	+ this.description 
                   	+ "</div>"
@@ -74,16 +86,16 @@
 			});
         }
     </script>
-    <script src="https://api.meetup.com/BreizhJUG/events?callback=addEvents"></script>
-    <script src="https://api.meetup.com/Docker-Rennes/events?callback=addEvents"></script>
-    <script src="https://api.meetup.com/Golang-Rennes/events?callback=addEvents"></script>
-    <script src="https://api.meetup.com/AndroidRennes/events?callback=addEvents"></script>
-    <script src="https://api.meetup.com/Rennes-Jenkins-Area-Meetup/events?callback=addEvents"></script>
-    <script src="https://api.meetup.com/rennes-devops/events?callback=addEvents"></script>
-    <script src="https://api.meetup.com/Meetup-Lambda-Rennes-Programmation-fonctionnelle/events?callback=addEvents"></script>
-    <script src="https://api.meetup.com/Software-Craftsmanship-Rennes/events?callback=addEvents"></script>
-    <script src="https://api.meetup.com/RennesJS/events?callback=addEvents"></script>
-    <script src="https://api.meetup.com/Agile-Rennes/events?callback=addEvents"></script>
-    <script src="https://api.meetup.com/Rennes-Jenkins-Area-Meetup/events?callback=addEvents"></script>
+    <script src="https://api.meetup.com/BreizhJUG/events?fields=featured_photo&callback=addEvents"></script>
+    <script src="https://api.meetup.com/Docker-Rennes/events?fields=featured_photo&callback=addEvents"></script>
+    <script src="https://api.meetup.com/Golang-Rennes/events?fields=featured_photo&callback=addEvents"></script>
+    <script src="https://api.meetup.com/AndroidRennes/events?fields=featured_photo&callback=addEvents"></script>
+    <script src="https://api.meetup.com/Rennes-Jenkins-Area-Meetup/events?fields=featured_photo&callback=addEvents"></script>
+    <script src="https://api.meetup.com/rennes-devops/events?fields=featured_photo&callback=addEvents"></script>
+    <script src="https://api.meetup.com/Meetup-Lambda-Rennes-Programmation-fonctionnelle/events?fields=featured_photo&callback=addEvents"></script>
+    <script src="https://api.meetup.com/Software-Craftsmanship-Rennes/events?fields=featured_photo&callback=addEvents"></script>
+    <script src="https://api.meetup.com/RennesJS/events?fields=featured_photo&callback=addEvents"></script>
+    <script src="https://api.meetup.com/Agile-Rennes/events?fields=featured_photo&callback=addEvents"></script>
+    <script src="https://api.meetup.com/Rennes-Jenkins-Area-Meetup/events?fields=featured_photo&callback=addEvents"></script>
   </body>
 </html>
