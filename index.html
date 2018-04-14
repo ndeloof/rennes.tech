@@ -20,6 +20,11 @@
 			color: #888;
 			margin: 10px 0 10px 10px;
 		}
+
+    .meetup-icon {
+      float:right;
+      margin-right:10px      
+    }
 	</style>
   </head>
   <body>
@@ -33,6 +38,23 @@
 
 	    <div class="album py-5 bg-light">
         <div class="container">
+
+          <div height="100">            
+
+<img src="meetups/BreizhJUG"/>
+<img src="meetups/Docker-Rennes"/>
+<img src="meetups/RennesJS"/>
+<img src="meetups/AndroidRennes"/>
+<img src="meetups/Golang-Rennes"/>
+<img src="meetups/Software-Craftsmanship-Rennes"/>
+<img src="meetups/Rennes-Jenkins-Area-Meetup"/>
+<img src="meetups/rennes-devops"/>
+<img src="meetups/Agile Rennes"/>
+            
+          </div>
+
+          <div height="20"> &nbsp;</div>
+
 
           <div class="row" id="events">
             
@@ -76,13 +98,14 @@
 	        		+ "<div class='card-body'>"
                   	+ "<h5 class='card-title'>"+this.name+"</h5>"
                   	+ "<h6 class='card-subtitle'><i class='far fa-calendar'></i> "+this.local_date+"</h6>"
-              // meetup icon from this.group.id
 	        		+ "<div class='card-text'>"
+                    + "<img src='meetups/"+ this.group.name +"' class='meetup-icon'/>"
+
                   	+ this.description 
                   	+ "</div>"
                   	+ "<div class='d-flex justify-content-between align-items-center'>"
                   	+ "<a href='"+this.link+"'>En savoir plus ...</a>"
-                    + "</div></div></div></div>");
+              + "</div></div></div></div>");
 			});
         }
     </script>
@@ -96,6 +119,5 @@
     <script src="https://api.meetup.com/Software-Craftsmanship-Rennes/events?fields=featured_photo&callback=addEvents"></script>
     <script src="https://api.meetup.com/RennesJS/events?fields=featured_photo&callback=addEvents"></script>
     <script src="https://api.meetup.com/Agile-Rennes/events?fields=featured_photo&callback=addEvents"></script>
-    <script src="https://api.meetup.com/Rennes-Jenkins-Area-Meetup/events?fields=featured_photo&callback=addEvents"></script>
   </body>
 </html>
