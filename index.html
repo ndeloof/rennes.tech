@@ -25,6 +25,11 @@
       float:right;
       margin-right:10px      
     }
+
+    .icon {
+      min-width: 100px;
+      display: inline-block;
+    }
 	</style>
   </head>
   <body>
@@ -35,17 +40,17 @@
 			    <h1 class="jumbotron-heading">Les meetups Techniques de Rennes</h1>
   			</div>
 
-        <div height="100">            
+        <div height="100" id="icons">   
 
-<img src="meetups/BreizhJUG"/>
-<img src="meetups/Docker-Rennes"/>
-<img src="meetups/RennesJS"/>
-<img src="meetups/AndroidRennes"/>
-<img src="meetups/Golang-Rennes"/>
-<img src="meetups/Software-Craftsmanship-Rennes"/>
-<img src="meetups/Rennes-Jenkins-Area-Meetup"/>
-<img src="meetups/rennes-devops"/>
-<img src="meetups/Agile Rennes"/>
+<div class="icon"><img src="meetups/BreizhJUG.png"/></div>
+<div class="icon"><img src="meetups/Docker-Rennes.png"/></div>
+<div class="icon"><img src="meetups/RennesJS.png"/></div>
+<div class="icon"><img src="meetups/AndroidRennes.png"/></div>
+<div class="icon"><img src="meetups/Golang-Rennes.png"/></div>
+<div class="icon"><img src="meetups/Software-Craftsmanship-Rennes.png"/></div>
+<div class="icon"><img src="meetups/Rennes-Jenkins-Area-Meetup.png"/></div>
+<div class="icon"><img src="meetups/rennes-devops.png"/></div>
+<div class="icon"><img src="meetups/Agile Rennes.png"/></div>
             
           </div>
   		</section>
@@ -94,7 +99,7 @@
                   	+ "<h5 class='card-title'>"+this.name+"</h5>"
                   	+ "<h6 class='card-subtitle'><i class='far fa-calendar'></i> "+this.local_date+"</h6>"
 	        		+ "<div class='card-text'>"
-                    + "<img src='meetups/"+ this.group.name +"' class='meetup-icon'/>"
+                    + "<img src='meetups/"+ this.group.urlname +".png' class='meetup-icon'/>"
 
                   	+ this.description 
                   	+ "</div>"
