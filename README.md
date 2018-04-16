@@ -2,7 +2,7 @@
 
 ## What ?
 
-Les communautés techniques sont diverses et vivent leur vie chacune à leur rythem, mais ça ne veut pas dire qu'elles n'ont pas 
+Les communautés techniques sont diverses et vivent leur vie chacune à leur rythme, mais ça ne veut pas dire qu'elles n'ont pas 
 des choses à partager. Entre autre, de la visibilité aussi bien pour le public que pour les structures avec qui elles peuvent
 être amenées à discuter pour obtenir des salles ou des financements.
 
