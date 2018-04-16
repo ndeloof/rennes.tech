@@ -40,19 +40,7 @@
 			    <h1 class="jumbotron-heading">Les meetups Techniques de Rennes</h1>
   			</div>
 
-        <div height="100" id="icons">   
-
-<div class="icon"><img src="meetups/BreizhJUG.png"/></div>
-<div class="icon"><img src="meetups/Docker-Rennes.png"/></div>
-<div class="icon"><img src="meetups/RennesJS.png"/></div>
-<div class="icon"><img src="meetups/AndroidRennes.png"/></div>
-<div class="icon"><img src="meetups/Golang-Rennes.png"/></div>
-<div class="icon"><img src="meetups/Software-Craftsmanship-Rennes.png"/></div>
-<div class="icon"><img src="meetups/Rennes-Jenkins-Area-Meetup.png"/></div>
-<div class="icon"><img src="meetups/rennes-devops.png"/></div>
-<div class="icon"><img src="meetups/Agile Rennes.png"/></div>
-            
-          </div>
+        <div height="100" id="icons"></div>
   		</section>
 
 	    <div class="album py-5 bg-light">
@@ -70,9 +58,16 @@
   	</main>
 
     <footer>
-      <section class="jumbotron text-center">
+      <section class="jumbotron card">
         <div class="row">
-          <p>Votre meetup adoré n'est pas listé ici ? <a href="https://github.com/ndeloof/rennes.tech/issues">Faites le nous savoir !</a></p>
+          <p class="col-md text-center">
+            Rennes.tech est une initiative des communautés techniques Rennaise.
+          </p>
+        </div>
+        <div class="row">
+          <p class="col-md text-center">
+            Vous voulez ajouter votre meetup à cette liste ? Ca se passe <a href="https://github.com/ndeloof/rennes.tech/issues">ici</a> !
+          </p>
         </div>
       </section>
     </footer>
@@ -88,13 +83,32 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
     <script>
+
+        var meetups = [
+          "BreizhJUG",
+          "Docker-Rennes",
+          "RennesJS",
+          "AndroidRennes",
+          "Golang-Rennes",
+          "Software-Craftsmanship-Rennes",
+          "Rennes-Jenkins-Area-Meetup",
+          "rennes-devops",
+          "Agile-Rennes"        
+        ];
+
+        $.each(meetups, function() {
+          $("#icons").append( "<div class='icon'><img src='meetups/"+this+".png'/></div>" );
+          $.getScript("https://api.meetup.com/"+this+"/events?fields=featured_photo&callback=addEvents");
+        });
+
         addEvents = function(json) {
         	$.each(json.data, function() {
             var image = "";    
           if (this.featured_photo) {
             image = this.featured_photo.photo_link;
           }
-          
+          console.log(this);
+                              
 				  $("#events").append(
                 "<div class='col-md-4'>" 
 	        		+ "<div class='card mb-4 box-shadow'>"
@@ -113,15 +127,5 @@
 			});
         }
     </script>
-    <script src="https://api.meetup.com/BreizhJUG/events?fields=featured_photo&callback=addEvents"></script>
-    <script src="https://api.meetup.com/Docker-Rennes/events?fields=featured_photo&callback=addEvents"></script>
-    <script src="https://api.meetup.com/Golang-Rennes/events?fields=featured_photo&callback=addEvents"></script>
-    <script src="https://api.meetup.com/AndroidRennes/events?fields=featured_photo&callback=addEvents"></script>
-    <script src="https://api.meetup.com/Rennes-Jenkins-Area-Meetup/events?fields=featured_photo&callback=addEvents"></script>
-    <script src="https://api.meetup.com/rennes-devops/events?fields=featured_photo&callback=addEvents"></script>
-    <script src="https://api.meetup.com/Meetup-Lambda-Rennes-Programmation-fonctionnelle/events?fields=featured_photo&callback=addEvents"></script>
-    <script src="https://api.meetup.com/Software-Craftsmanship-Rennes/events?fields=featured_photo&callback=addEvents"></script>
-    <script src="https://api.meetup.com/RennesJS/events?fields=featured_photo&callback=addEvents"></script>
-    <script src="https://api.meetup.com/Agile-Rennes/events?fields=featured_photo&callback=addEvents"></script>
   </body>
 </html>
