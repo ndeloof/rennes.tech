@@ -8,7 +8,8 @@ var meetups = [
   "Software-Craftsmanship-Rennes",
   "Rennes-Jenkins-Area-Meetup",
   "rennes-devops",
-  "Agile-Rennes"        
+  "Agile-Rennes",
+  "Meetup-Lambda-Rennes-Programmation-fonctionnelle"
 ];
 
 
