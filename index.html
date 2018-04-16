@@ -30,6 +30,10 @@
       min-width: 100px;
       display: inline-block;
     }
+
+    #events li {
+      list-style: none;
+    }
 	</style>
   </head>
   <body>
@@ -49,9 +53,7 @@
           <div class="col-md text-center">
             <h2>Evénements à venir</h2>
           </div>
-          <div class="row" id="events">
-
-          </div>
+          <ol class="row" id="events"><li/></ol>
         </div>
       </div>
 
@@ -84,6 +86,8 @@
 
     <script>
 
+
+        var events = [];
         var meetups = [
           "BreizhJUG",
           "Docker-Rennes",
@@ -103,16 +107,29 @@
 
         addEvents = function(json) {
         	$.each(json.data, function() {
-            var image = "";    
+            var image = "placeholder.png";    
           if (this.featured_photo) {
             image = this.featured_photo.photo_link;
           }
           console.log(this);
-                              
-				  $("#events").append(
-                "<div class='col-md-4'>" 
+          
+          var pos = 0;
+          while (pos < events.length) {
+            if (events[pos].time >= this.time) {
+              break;
+            }
+            pos++;
+          }
+          events.splice(pos,0, this);
+          console.log("insert "+this.name+" at position " + pos);
+          console.log(events)
+
+    
+          $('#events li:eq('+pos+')').after(
+                "<li class='col-md-4'>" 
 	        		+ "<div class='card mb-4 box-shadow'>"
-	        		+ "<img class='card-img-top' src='"+ image + "'>"
+              + "<img class='card-img-top' >"
+	        		+ "<img class='card-img-top' style='height: 180px; width: 100%; display: block;' src='"+ image + "'>"
 	        		+ "<div class='card-body'>"
                   	+ "<h5 class='card-title'>"+this.name+"</h5>"
                   	+ "<h6 class='card-subtitle'><i class='far fa-calendar'></i> "+this.local_date+"</h6>"
@@ -123,7 +140,8 @@
                   	+ "</div>"
                   	+ "<div class='d-flex justify-content-between align-items-center'>"
                   	+ "<a href='"+this.link+"'>En savoir plus ...</a>"
-              + "</div></div></div></div>");
+              + "</div></div></div>"
+              + "</li>");
 			});
         }
     </script>
