@@ -15,7 +15,7 @@ var meetups = [
 var events = [];
 
 $.each(meetups, function() {
-  $("#icons").append( "<div class='icon'><img src='meetups/"+this+".png'/></div>" );
+  $("#icons").append( "<div class='icon'><a href='https://www.meetup.com/"+this+"/'><img src='meetups/"+this+".png'/ title='"+this+"'></a></div>" );
   $.getScript("https://api.meetup.com/"+this+"/events?fields=featured_photo&callback=addEvents");
 });
 
