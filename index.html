@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Rennes Tech</title>
+    <title>Quebec City Tech</title>
 
     <style>
     	.card-text {
@@ -23,12 +23,21 @@
 
     .meetup-icon {
       float:right;
-      margin-right:10px      
+      margin-right:10px;
+      width: 100px;
+      height: 100px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    #icons {
+      padding-top: 2rem;
     }
 
     .icon {
-      min-width: 100px;
       display: inline-block;
+      padding: 10px;
     }
 
     #events li {
@@ -40,11 +49,11 @@
   	<main role="main">
   		<section class="jumbotron text-center">
   			<div class="container">
-			    <img src="logo.png" style="position:absolute; right:10px">
-			    <h1 class="jumbotron-heading">Les meetups Techniques de Rennes</h1>
+			    <img src="quebec.png" style="position:absolute; right:10px">
+			    <h1 class="jumbotron-heading">Les meetups Techniques de la ville de Québec</h1>
   			</div>
 
-        <div height="100" id="icons"></div>
+        <div id="icons" class="row justify-content-md-center"></div>
   		</section>
 
 	    <div class="album py-5 bg-light">
@@ -63,19 +72,16 @@
       <section class="jumbotron card">
         <div class="row">
           <p class="col-md text-center">
-            Rennes.tech est une initiative des communautés techniques Rennaise.
+            Quebec-City.tech est une initiative des communautés techniques de Québec.
           </p>
         </div>
         <div class="row">
           <p class="col-md text-center">
-            Vous voulez ajouter votre meetup à cette liste ? Ca se passe <a href="https://github.com/ndeloof/rennes.tech/issues">ici</a> !
+            Vous voulez ajouter votre meetup à cette liste ? Ça se passe <a href="https://github.com/jmaitrehenry/quebec-city.tech/issues">ici</a> !
           </p>
         </div>
       </section>
     </footer>
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -84,17 +90,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
-    <script src="meetups.js">
-    </script>
+    <script src="meetups.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117591990-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64642121-2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-117591990-1');
+      gtag('config', 'UA-64642121-2');
     </script>
 
   </body>
