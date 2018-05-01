@@ -2,7 +2,12 @@
 var meetups = [
   { id: 'Docker-Quebec-Meetup', name: 'Docker Québec' },
   { id: 'AzureQC', name: 'Communauté Microsoft Azure Québec' },
-  { id: 'QuebecCity-AWS-User-Group', name: 'Québec City AWS User Group' }
+  { id: 'QuebecCity-AWS-User-Group', name: 'Québec City AWS User Group' },
+  { id: 'Kubernetes-Quebec', name: 'Kubernetes and Cloud Native Québec' },
+  { id: 'Quebec-City-HashiCorp-User-Group', name: 'Quebec City HashiCorp User Group' },
+  { id: 'Sitecore-User-Group-Quebec', name: 'Sitecore User Group Quebec' },
+  { id: 'Quebec-Numerique', name: 'Québec Numérique' },
+  { id: 'DotNet-Quebec', name: 'DotNet Quebec' }
 ];
 
 
