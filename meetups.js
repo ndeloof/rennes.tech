@@ -12,7 +12,8 @@ var meetups = [
   "Meetup-Lambda-Rennes-Programmation-fonctionnelle",
   "AFUP-Rennes",
   "cssflip",
-  "DevCamp"
+  "DevCamp",
+  "Flutter-Rennes"
 ];
 
 
