@@ -14,8 +14,7 @@ var meetups = [
   "cssflip",
   "DevCamp",
   "ecoconception-de-services-numeriques-rennes",
-  "Flutter-Rennes",
-  "Le-Wagon-Rennes-Coding-Bootcamp"
+  "Flutter-Rennes"
 ];
 
 
