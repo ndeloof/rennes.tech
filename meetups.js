@@ -32,6 +32,10 @@ addEvents = function(json) {
       image = this.featured_photo.photo_link;
     }
     console.log(this);
+
+    if (typeof this.name === 'undefined') {
+      return
+    }
     
     var pos = 0;
     while (pos < events.length) {
