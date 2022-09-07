@@ -13,6 +13,7 @@ var meetups = [
   "AFUP-Rennes",
   "cssflip",
   "DevCamp",
+  "ecoconception-de-services-numeriques-rennes",
   "Flutter-Rennes",
   "Le-Wagon-Rennes-Coding-Bootcamp"
 ];
@@ -54,7 +55,7 @@ addEvents = function(json) {
             	+ "<h5 class='card-title'>"+this.name+"</h5>"
             	+ "<h6 class='card-subtitle'><i class='far fa-calendar'></i> "+this.local_date+"</h6>"
     		+ "<div class='card-text'>"
-              + "<img src='meetups/"+ this.group.urlname +".png' class='meetup-icon'/>"
+              + "<img src='meetups/"+ this.group?.urlname +".png' class='meetup-icon'/>"
 
             	+ this.description 
             	+ "</div>"
