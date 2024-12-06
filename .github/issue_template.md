@@ -8,5 +8,5 @@
 ### Si vous n'utilisez pas le service meetup.com
 
 1. assurez-vous que votre site web fournit une API fournissant les événement à venir
-1. indiquez nous comment l'utiliser :P
-1. fournissez nous un lien vers le logo de votre groupe
+1. indiquez-nous comment l'utiliser :P
+1. fournissez-nous un lien vers le logo de votre groupe
