@@ -14,18 +14,19 @@ var meetups = [
   "cssflip",
   "DevCamp",
   "ecoconception-de-services-numeriques-rennes",
-  "Flutter-Rennes"
+  "Flutter-Rennes",
+  "python-rennes",
 ];
 
 
-var events = [];
+const events = [];
 
 $.each(meetups, function() {
   $("#icons").append( "<div class='icon'><a href='https://www.meetup.com/"+this+"/'><img src='meetups/"+this+".png'/ title='"+this+"'></a></div>" );
   $.getScript("https://api.meetup.com/"+this+"/events?fields=featured_photo&callback=addEvents");
 });
 
-addEvents = function(json) {
+const addEvents = function(json) {
 	$.each(json.data, function() {
     var image = "placeholder.png";    
     if (this.featured_photo) {
@@ -47,7 +48,6 @@ addEvents = function(json) {
     events.splice(pos,0, this);
     console.log("insert "+this.name+" at position " + pos);
     console.log(events)
-
 
     $('#events li:eq('+pos+')').after(
           "<li class='col-md-4'>" 
