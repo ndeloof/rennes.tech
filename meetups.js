@@ -6,7 +6,6 @@ var meetups = [
   "AndroidRennes",
   "Golang-Rennes",
   "Software-Craftsmanship-Rennes",
-  "Rennes-Jenkins-Area-Meetup",
   "rennes-devops",
   "Agile-Rennes",
   "Meetup-Lambda-Rennes-Programmation-fonctionnelle",
