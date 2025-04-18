@@ -7,7 +7,6 @@ var meetups = [
   {slug: "Software-Craftsmanship-Rennes", title: "Software Crafters Rennes"},
   {slug: "rennes-devops", title: "Rennes devops"},
   {slug: "Agile-Rennes", title: "Agile Rennes"},
-  {slug: "Meetup-Lambda-Rennes-Programmation-fonctionnelle", title: "Lambda Rennes - Programmation fonctionnelle"},
   {slug: "AFUP-Rennes", title: "AFUP Rennes"},
   {slug: "ecoconception-de-services-numeriques-rennes", title: "Écoconception de services numériques Rennes"},
   {slug: "Flutter-Rennes", title: "Mobile Rennes"},
